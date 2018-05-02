@@ -68,6 +68,7 @@ extern "C" {
 # include <intrinsics.h>
 #endif
 
+#include <memory.h> // strlen
 #include <stdarg.h>
 
 RUBY_SYMBOL_EXPORT_BEGIN
@@ -1961,6 +1962,7 @@ VALUE rb_require(const char*);
 
 RUBY_EXTERN VALUE rb_mKernel;
 RUBY_EXTERN VALUE rb_mComparable;
+// enum.c, module Enumerable
 RUBY_EXTERN VALUE rb_mEnumerable;
 RUBY_EXTERN VALUE rb_mErrno;
 RUBY_EXTERN VALUE rb_mFileTest;

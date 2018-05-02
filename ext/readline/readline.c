@@ -16,7 +16,10 @@
 ************************************************/
 
 #ifdef RUBY_EXTCONF_H
+#if 0
 #include RUBY_EXTCONF_H
+#endif
+#include <build/ext/readline/extconf.h>
 #endif
 
 #include "ruby/config.h"
@@ -1927,6 +1930,8 @@ int rl_clear_signals(void);
 void
 Init_readline(void)
 {
+    // puts("Init_readline");
+    // getchar();
     VALUE history, fcomp, ucomp, version;
 
     /* Allow conditional parsing of the ~/.inputrc file. */
@@ -1957,6 +1962,7 @@ Init_readline(void)
 #endif
 
     mReadline = rb_define_module("Readline");
+    // Readline.readline
     rb_define_module_function(mReadline, "readline",
                               readline_readline, -1);
     rb_define_singleton_method(mReadline, "input=",

@@ -3348,6 +3348,7 @@ rb_mod_remove_cvar(VALUE mod, VALUE name)
     goto not_defined;
 }
 
+// instance variable
 VALUE
 rb_iv_get(VALUE obj, const char *name)
 {
@@ -3356,6 +3357,7 @@ rb_iv_get(VALUE obj, const char *name)
     return rb_ivar_get(obj, id);
 }
 
+// instance variable
 VALUE
 rb_iv_set(VALUE obj, const char *name, VALUE val)
 {

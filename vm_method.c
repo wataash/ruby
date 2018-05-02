@@ -705,6 +705,13 @@ rb_define_alloc_func(VALUE klass, VALUE (*func)(VALUE))
 {
     Check_Type(klass, T_CLASS);
     RCLASS_EXT(klass)->allocator = func;
+
+    RCLASS_EXT(klass);
+    (void)RCLASS(klass)->ptr;
+    // --
+    RCLASS(klass);
+    R_CAST(RClass)klass;
+    (void)(struct RClass *)klass;
 }
 
 void
