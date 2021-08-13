@@ -1,0 +1,11 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: "LLVM"
+
+# AlignAfterOpenBracket: true
+# BraceWrapping:
+#   AfterFunction: true
+
+IndentWidth: 4
+TabWidth: 8
+UseTab: Always
